@@ -12,11 +12,11 @@ function Card(props) {
 
           <h4 className="temp">{props.subtitle}</h4>
           <h1 className="srizName">{props.name}</h1>
-          <a href={props.link} target={'_blank'}>
+          <a href={props.link} target={'_blank'} rel="noreferrer">
             <button className="mybtn"> {props.button}</button>
-          </a>
+                        </a>
         </div>
-      </div>
+      </div>  
     </>
   );
 }

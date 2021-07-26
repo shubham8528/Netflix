@@ -33,13 +33,14 @@ ReactDOM.render(
       link={data[2].link}
     />
 
-    <Card
+    {/* <Card
       imagel={data[3].imagel}
       subtitle={data[3].subtitle}
       name={data[3].name}
       button={data[3].button}
       link={data[3].link}
-    />
-  </>,
+    /> */}
+  </>
+  ,
   document.getElementById("root")
 );
