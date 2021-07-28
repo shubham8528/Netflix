@@ -28,5 +28,5 @@ function Card(props) {
 }
 
 
-export default Card;
-console.log(Card)
+export default(Card)
+
