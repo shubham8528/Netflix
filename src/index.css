@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(209, 217, 221);
+  background-color: rgb(68, 68, 68);
 }
 
 
@@ -19,27 +19,38 @@ code {
 }
 
 .banName {
-  background-color: black;
+  background-color: rgb(34, 34, 34);
   padding: 10px;
   text-align: center;
   color: rgba(255, 0, 0, 0.705);
   font-family: 'Martel Sans', sans-serif;
-  
-}
-.boxx {
-  display: inline-block;
-margin-left: 50px;
-padding: 0px; 
 
 }
+
+.container{
+display:flex ;
+justify-content: center;
+
+
+}
+@media screen and (max-width:500px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+justify-content: center;    
+  align-items: center;}
+
+}
+
 .box {
   border-radius: 10px;
-  margin: 100px 50px;
   background-color: aliceblue;
   width: 250px;
+  margin: 50px 25px;
   box-shadow: 10px 10px 30px black;
   transition: 0.5s;
   overflow: hidden;
+  
 }
 .box:hover {
   transform: scale(1.1);

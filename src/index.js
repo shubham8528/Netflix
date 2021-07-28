@@ -3,44 +3,113 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Card from "./Mycards";
-import data from "./Sdata";
-console.log(data)
+import Sdata from "./Sdata";
+
+
+
+
+// function Shubham(props) {
+  
+//   return (
+//     <div>
+//       <div style={{ margin: "50px" }}>
+//         <img
+//           style={{ width: "200px" }}
+//           src={props.images}
+//           alt="url dose not access"
+//         ></img>
+//         <div>
+//           <p>{props.titles}</p>
+//           <h3>{props.heading}</h3>
+//           <button style={{ padding: "10px" }}>{props.buttons}</button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+const Mydata=[
+    {
+    picture:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png', titles:'Image Title'
+    ,heading:'Image Name', buttons:'boy'
+ } ,
+ {
+  picture:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png',titles:'Image Title'
+  ,heading:'Image Name', buttons:'Play girl'
+ },
+{
+  pictureimages:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png' ,titles:'Image Title'
+    ,heading:'Image Name' ,buttons:'Play mail'
+
+}
+]
+
+
+
 ReactDOM.render(
   <>
+
+  {/* {Mydata.map(function(value){
+   
+    return(
+     <Shubham 
+    images={value.picture}
+    titles={value.titles}
+    heading={value.heading}
+    buttons={value.buttons}
+    />)
+  })} */}
+
+
     <div className="banName">
       <h2>LIST OF TOP NETFLIX SERIES IN 2020</h2>
     </div>
-    <Card
-      imagel={data[0].imagel}
-      subtitle={data[0].subtitle}
-      name={data[0].name}
-      button={data[0].button}
-      link={data[0].link}
-    />
-    <Card
-      imagel={data[1].imagel}
-      subtitle={data[1].subtitle}
-      name={data[1].name}
-      button={data[1].button}
-      link={data[1].link}
-    />
+    <div className="container">
+      {Sdata.map((mcard) => {
+        return (
+          <Card
+            id={mcard.id}
+            name={mcard.name}
+            imagel={mcard.imagel}
+            subtitle={mcard.subtitle}
+            button={mcard.button}
+          />
+        );
+      })}
+    </div>
+    {/* Revision props and map */}
+    {/* <h1 style={{textAlign:'center'}}>this is simple Heading</h1>
+<div>
+    <div style={{margin:'50px'}}>
+  <img style={{width:'200px'}} src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png' alt='url dose not access'></img>
+<div>
+  <p>Image Title</p>
+  <h3>Image Name</h3>
+  <button style={{padding:'10px'}}>Play</button>
+</div>
+  </div>
+</div>
 
-    <Card
-      imagel={data[2].imagel}
-      subtitle={data[2].subtitle}
-      name={data[2].name}
-      button={data[2].button}
-      link={data[2].link}
-    />
-
-    {/* <Card
-      imagel={data[3].imagel}
-      subtitle={data[3].subtitle}
-      name={data[3].name}
-      button={data[3].button}
-      link={data[3].link}
-    /> */}
-  </>
-  ,
+<div>
+    <div style={{margin:'50px'}}>
+  <img style={{width:'200px'}} src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png' alt='url dose not access'></img>
+<div>
+  <p>Image Title</p>
+  <h3>Image Name</h3>
+  <button style={{padding:'10px'}}>Play</button>
+</div>
+  </div>
+</div>
+<div>
+    <div style={{margin:'50px'}}>
+  <img style={{width:'200px'}} src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png' alt='url dose not access'></img>
+<div>
+  <p>Image Title</p>
+  <h3>Image Name</h3>
+  <button style={{padding:'10px'}}>Play</button>
+</div>
+  </div>
+</div> */}
+  </>,
   document.getElementById("root")
 );

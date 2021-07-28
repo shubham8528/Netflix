@@ -2,9 +2,12 @@
 import React from "react";
 
 function Card(props) {
+  
   return (
     <>
-      <div className="boxx">
+ 
+   
+      <div className="boxx" >
         <div className="box">
           <div className="boxImg">
             <img src={props.imagel} />
@@ -12,12 +15,18 @@ function Card(props) {
 
           <h4 className="temp">{props.subtitle}</h4>
           <h1 className="srizName">{props.name}</h1>
-          <a href={props.link} target={'_blank'} rel="noreferrer">
+          <a href={props.link} target="_blank" rel="noreferrer">
             <button className="mybtn"> {props.button}</button>
-                        </a>
+          </a>
         </div>
-      </div>  
-    </>
+      </div>
+
+
+  
+          </>
   );
 }
+
+
 export default Card;
+console.log(Card)
